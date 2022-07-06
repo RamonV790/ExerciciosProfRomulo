@@ -15,7 +15,7 @@ namespace ExercicioProfRomulo.EscolinhaTicTic
             double nt3;
             double soma;
             double media;
-            string nome;
+            string nome, resultado;
             double nfinal;
             double mfinal;
             Console.WriteLine("Nome do Aluno: ");
@@ -33,10 +33,15 @@ namespace ExercicioProfRomulo.EscolinhaTicTic
            media = soma / 3;
             mfinal = Math.Round(media, 2, MidpointRounding.AwayFromZero);
             Console.WriteLine($"Média das notas: {mfinal}");
+            if (media >=7){
+                resultado = "aprovado";
+            }
+            else
+            {
+                resultado = "reprovado";
+            }
+           Console.WriteLine($"O aluno {nome} foi {resultado}");
             Console.ReadLine();
-            
-           
-
         }
     }
 }
